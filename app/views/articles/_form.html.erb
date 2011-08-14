@@ -1,0 +1,36 @@
+<div class="proz">
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :title %><br />
+  <%= f.text_area :title, :rows => 1, :cols => 103  %> 
+  </div>
+  <div>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :cols => 103 %>
+  </div>
+  <div>
+    <%= f.label :image_url %><br />
+    <%= f.text_area :image_url, :rows => 1, :cols => 103  %>
+  </div>
+  <div>
+    <%= f.label :video_url %><br />
+    <%= f.text_area :video_url, :rows => 2, :cols => 103   %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>

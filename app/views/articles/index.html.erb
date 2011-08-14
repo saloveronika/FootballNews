@@ -1,0 +1,33 @@
+<body>
+<div> 
+<% for article in @articles %>
+<fieldset class="text">
+ 	<table>
+  	<tr class="tilles">
+  		<th>Назва</th>
+    	<th>Текст статті</th>
+  	</tr>
+	<td>
+		<%= article.title %>
+	</td>
+   	<td><%=raw (truncate(strip_tags(article.description), :length => 100) )%> </td>
+<div>
+	
+	<td><%=link_to image_tag(article.image_url, :size => "320x280", :alt => nil ), article %> </td>
+	
+</div>
+</table>	
+<h2 id="links">
+	<td><%= link_to 'Показати детально', article %></td>
+    <td><%= link_to 'Редагувати', edit_article_path(article) %></td>
+    <td><%= link_to 'Знищити', article, :confirm => 'Точно позбутися?', :method => :delete %></td>
+</h2>
+</fieldset> 
+  <% end %>
+
+
+<br />
+
+<%= link_to 'Ше стаття', new_article_path %>
+</div>
+</body>
