@@ -1,0 +1,29 @@
+<body>
+
+<div>
+	<h2 id="links">
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back', admins_path %>
+</h2>
+<h2>
+  <b>Title:</b>
+  <%= @admin.title %> 
+</h2>
+	<img class="im" src="<%= raw @admin.image_url %>">
+<div>
+  <b>Description:</b>
+  <%= @admin.description %>
+</div>
+
+<div>
+  <b>Video:</b>
+ 
+</div>
+<%= raw(@admin.video_url) %>
+
+<h2 id="links">
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back', admins_path %>
+</h2>
+</div>
+</body>

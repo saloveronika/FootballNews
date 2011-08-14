@@ -1,0 +1,33 @@
+<body>
+<div> 
+<% for admin in @admins %>
+<fieldset class="text">
+ 	<table>
+  	<tr class="tilles">
+  		<th>Назва</th>
+    	<th>Текст статті</th>
+  	</tr>
+	<td>
+		<%= admin.title %>
+	</td>
+   	<td><%=raw (truncate(strip_tags(admin.description), :length => 100) )%> </td>
+<div>
+	
+	<td><%=link_to image_tag(admin.image_url, :size => "320x280", :alt => nil ), admin %> </td>
+	
+</div>
+</table>	
+<h2 id="links">
+	<td><%= link_to 'Показати детально', admin %></td>
+    <td><%= link_to 'Редагувати', edit_admin_path(admin) %></td>
+    <td><%= link_to 'Знищити', admin, :confirm => 'Точно позбутися?', :method => :delete %></td>
+</h2>
+</fieldset> 
+  <% end %>
+
+
+<br />
+
+<%= link_to 'Ше стаття', new_admin_path %>
+</div>
+</body>

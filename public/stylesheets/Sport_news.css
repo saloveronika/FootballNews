@@ -1,0 +1,81 @@
+/*Admins part*/
+body {
+	background: url('/images/37.jpg') fixed center;
+	
+	}
+/*Head*/
+#banner {
+	background: url('/images/20.png') left  top no-repeat;
+	
+	border-width: 0px;
+	padding:  0px 45px 210px 0px; 
+}
+
+#imgban {
+	align: center;
+	margin:0px 0px 0px 0px; 
+	border:none; 
+	padding-top:0px; 
+	width: 785px;
+	height: 290px; 
+}
+
+#proz
+{	
+	width: 750px;
+	background-position: center;
+	margin: 0em 240px 0em 300px;
+	padding: 20px 15px 15px 20px; 
+	background-color: #ff9600;
+	color:white;
+	opacity: 0.70;
+	text-align: justify;
+	}
+div.neproz {
+	opacity: 1.0;
+}
+h1 {
+	color: #0a8504;
+	text-indent: 10px;
+	text-align: center;
+	font-size: 50px;
+}
+h2 {color:white;
+	
+	font-size: 20px;
+}
+tr.tilles {
+	
+	font-size: 20px;
+	margin-left: 10px;
+}
+td.im {
+	opacity: 1.0;
+}
+#links {
+	font-size: 15px;
+	color: white;
+}
+/*sidebar*/
+#contents {
+	
+	font-size: 20px;
+}
+fieldset.text {
+	margin:1em 1em 1em 1em;
+	border: ridge;
+	background-color: white;
+	color: black;
+}
+
+img.im {
+	opacity: 1.0;
+	max-height: 400;
+	max-width: 500px;
+}
+
+
+td {
+	padding: 5px 5px 5px 5px; 
+	
+}
