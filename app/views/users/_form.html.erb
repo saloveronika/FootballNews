@@ -16,6 +16,11 @@
 <legend>Enter User Details</legend>
 
   <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email, :value => '' %>
+  </div>
+
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, :value => '' %>
   </div>

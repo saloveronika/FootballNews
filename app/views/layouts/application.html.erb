@@ -5,45 +5,21 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Articles: <%= controller.action_name %></title>
- <%= stylesheet_link_tag 'joshuaclayton-blueprint-css-9bf9513/blueprint/screen', :media => 'screen' %>
-    <%= stylesheet_link_tag 'joshuaclayton-blueprint-css-9bf9513/blueprint/print',  :media => 'print' %>
-<%= javascript_include_tag :defaults%>
-	<%= csrf_meta_tag %>
+ 	<%= csrf_meta_tag %>
+	<%= render 'layouts/stylesheets' %>
 </head>
 <body>
-<table> 
-<td>
-<div id="banner">	
+
+<div class="container">	
+	 <%= render 'layouts/header' %>
+
+	<section  class="round">
+		<%= yield :layout %>
+	</section>
+	
+	<%= render 'layouts/footer' %>
 	
 
-	<div style='margin-left: 110px; padding:20px 20px 10px 10px'>
-	
-<p>		
-	
-	<div> <%= @current %> </div>
-	
-	<p id="links">
-		<%= link_to "Статті", articles_path %>
-		<%= link_to "Користувачі", users_path %>
-		<%= link_to "Головна", admin_path %>
-		<%= button_to 'Вийти' , logout_path, :method => :delete %>
-	</p>
-
-	
-</p>
-
-	</div>
-	</td>
-	<td><img src="/images/20.png"> </img></td>
-	<td><img id="imgban" src='/images/39.jpg'>  </img>	</td>
-	
-</table>
-
-	<div  id="proz">
-		
-	
-	<%= yield :layout %>
-	</div>
 </div>
 </body>
 </html>

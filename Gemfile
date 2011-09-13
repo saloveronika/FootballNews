@@ -9,6 +9,9 @@ gem 'pg'
 
 group :development do
   gem 'rspec-rails', '2.6.1'
+  gem 'annotate', '2.4.0'
+  gem 'gravatar_image_tag', '1.0.0.pre2'
+
 end
 
 group :test do
@@ -18,6 +21,7 @@ group :test do
   gem 'ZenTest'
   gem 'growl'
   gem 'autotest'
+  gem 'factory_girl_rails'
 
 end
 

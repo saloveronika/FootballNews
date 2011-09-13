@@ -8,7 +8,7 @@ skip_before_filter :authorize
   def create
 		if current_user = User.authenticate(params[:name], params[:password])
 			session[:user_id] = current_user.id
-			@current = current_user.name
+			#@current = current_user.name
 			#@current = current_user.admin
 			#@current.update_attribute :admin, true
 			redirect_to admin_url

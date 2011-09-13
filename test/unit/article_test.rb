@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: articles
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)
+#  description :text
+#  image_url   :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
+#  video_url   :text
+#
+
 require 'test_helper'
 
 class ArticleTest < ActiveSupport::TestCase
